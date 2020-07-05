@@ -84,7 +84,7 @@ class Register extends React.Component
                                    placeholder="Enter username"
                             />
                         </label>
-                        {/* { this.state.errors.username && <p className="text text-danger"> { this.state.errors.username.message } </p>} */}
+                        
                     </div>
 
                     <div className="form-group">
@@ -98,7 +98,7 @@ class Register extends React.Component
                                 placeholder="Enter email"
                             />
                         </label>
-                        {/* {this.state.errors.email && <p className="text text-danger"> {this.state.errors.email.message} </p>} */}
+                        
                     </div>
 
                     <div className="form-group">
@@ -112,7 +112,7 @@ class Register extends React.Component
                                 placeholder="Enter first name"
                             />
                         </label>
-                        {/* {this.state.errors.email && <p className="text text-danger"> {this.state.errors.email.message} </p>} */}
+                        
                     </div>
 
                     <div className="form-group">
@@ -126,7 +126,7 @@ class Register extends React.Component
                                 placeholder="Enter last name"
                             />
                         </label>
-                        {/* {this.state.errors.email && <p className="text text-danger"> {this.state.errors.email.message} </p>} */}
+                        
                     </div>
 
                     <div className="form-group">
@@ -140,7 +140,7 @@ class Register extends React.Component
                                 placeholder="enter 10 digit number"
                             />
                         </label>
-                        {/* {this.state.errors.email && <p className="text text-danger"> {this.state.errors.email.message} </p>} */}
+                        
                     </div>
 
                     <div className="form-group">
@@ -154,7 +154,7 @@ class Register extends React.Component
                                    placeholder="Enter password"
                             />
                         </label>
-                        {/* {this.state.errors.password && <p className="text text-danger"> {this.state.errors.password.message} </p>} */}
+                        
                     </div>
                     <div className="form-group">
                         <label>
@@ -167,7 +167,7 @@ class Register extends React.Component
                                    placeholder="Enter  conform password"
                             />
                         </label>
-                        {/* {this.state.errors.password && <p className="text text-danger"> {this.state.errors.password.message} </p>} */}
+                        
                     </div>
                     {this.state.notice && <p className="text text-danger"> {this.state.notice} </p>}
 

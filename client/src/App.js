@@ -6,6 +6,7 @@ import Login from './components/users/Login'
 import Account from './components/users/Account'
 import axios from 'axios'
 
+import UserUpdate from './components/users/Edit'
 
 class App extends React.Component{
 
@@ -43,7 +44,7 @@ class App extends React.Component{
             <div className="navbar-header"> 
             </div>
             <ul className="nav navbar-nav">
-              <li className="active">< Link to="/">Home</Link></li>
+              <li>< Link to="/">Home</Link></li>
               { this.state.isAuthenticated ? (
                 <React.Fragment>
                 <li><Link to="/users/logout" className="nav-item nav-link" >Logout </Link></li>
@@ -85,6 +86,8 @@ class App extends React.Component{
                   localStorage.removeItem('token')
                 })
             }} />
+
+          <Route path="/users/edit/:id" component={ UserUpdate } />  
            
 
          

@@ -5,7 +5,7 @@ const  {authenticateUser}=require('../middleware/authentication')
 
 
 // localhost:3005/users/allusers
-router.get('/allusers',(req,res)=>{
+router.get('/allusers',authenticateUser,(req,res)=>{
     User.find()
     .then(users=>{
         res.send(users)
@@ -19,8 +19,8 @@ router.get('/allusers',(req,res)=>{
 
 router.post('/register',(req,res)=>{
     const body=req.body
-   
     const user =new User(body)
+    
     console.log(body)
     user.save()
     .then(user=>res.send(user))
@@ -44,6 +44,20 @@ router.post('/login',(req,res)=>{
 
     
 })
+
+router.put('/edit/:id',authenticateUser,(req,res)=>{
+    const id=req.params.id
+    const body=req.body
+    User.findByIdAndUpdate(id,body,{new:true,runValidators:true})
+    .then(user=>{
+        res.send(user)
+    })
+    .catch(err=>{
+        res.send(err)
+    })
+    
+})
+
 
 router.get('/account', authenticateUser,(req,res)=>{
     const {user}=req

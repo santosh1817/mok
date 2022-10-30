@@ -1,9 +1,9 @@
-const express=require('express')
-const router=express.Router()
-const {usersRouter}=require('../app/controllers/UsersController')
+const express = require('express')
+const router = express.Router()
+const { bookingRouter } = require('../app/controllers/BookingController')
 
-router.use('/users',usersRouter)
+router.use('/booking', bookingRouter)
 
-module.exports={
-    routes:router
+module.exports = {
+    routes: router
 }
